@@ -1,0 +1,210 @@
+fieldset {
+    border: none;
+    border-top: solid 1px var(--disabled-color);
+}
+
+fieldset>legend {
+    color: var(--primary-color);
+    padding: 0 8px;
+    font-size: 0.9em;
+    text-align: left;
+}
+
+.form-group {
+    position: relative;
+    padding-top: 1em;
+    display: inline-block;
+}
+
+input:not([type="checkbox"])+label, textarea+label {
+    position: absolute;
+    top: 0;
+    left: var(--border-radius);
+    font-size: 0.9em;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease-out;
+    color: var(--secondary-color);
+    font-size: 0.8em;
+}
+
+input:not([type="checkbox"]):placeholder-shown+label, textarea:placeholder-shown+label {
+    opacity: 0;
+    transform: translateY(1rem);
+}
+
+button {
+    display: inline-block;
+    background: none;
+    padding: 10px 70px;
+    margin: 8px;
+    outline: none;
+    border: solid 1px #fff;
+    border-radius: var(--border-radius);
+    color: #fff;
+    font-weight: 300;
+    text-transform: lowercase;
+    font-family: "Lato", sans-serif;
+    font-size: 1.3em;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.1s ease-out;
+}
+
+button:focus, button.inverted:focus {
+    box-shadow: var(--shadow), var(--focus-blur);
+}
+
+button.inverted {
+    background: #fff;
+    color: var(--background-color);
+    box-shadow: var(--shadow);
+}
+
+button:active, button.inverted:active {
+    transform: translateY(2px);
+    box-shadow: var(--shadow-pressed);
+}
+
+input, textarea {
+    display: inline-block;
+    background: none;
+    padding: 8px 20px;
+    margin: 8px;
+    outline: none;
+    border: solid 1px #fff;
+    border-radius: var(--border-radius);
+    color: #fff;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    box-shadow: var(--inset-shadow);
+    -webkit-box-shadow: var(--inset-shadow);
+}
+
+textarea {
+    vertical-align: top;
+    font-size: 0.9em;
+}
+
+input:focus, textarea:focus {
+    box-shadow: var(--inset-shadow), var(--focus-blur);
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--disabled-color);
+    opacity: 1;
+}
+
+input:disabled, textarea:disabled {
+    border-color: var(--disabled-color);
+    color: var(--disabled-color);
+}
+
+input:invalid, textarea:invalid {
+    border-color: var(--error-color);
+}
+
+input:invalid:focus, textarea:invalid:focus {
+    border-color: var(--error-color);
+    box-shadow: var(--inset-shadow), var(--error-focus-blur);
+}
+
+/* BADGE */
+
+.badge {
+    display: inline-block;
+    background: orange;
+    color: var(--bg-color);
+    padding: 2px 8px;
+    font-size: 0.9em;
+    border-radius: 1em;
+}
+
+.badge:before {
+    content: "#";
+}
+
+/* CHECKBOX */
+
+.checkbox {
+    position: relative;
+    display: inline-block;
+}
+
+input[type="checkbox"] {
+    opacity: 0;
+}
+
+input[type="checkbox"]:not(:disabled)+label {
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+input[type="checkbox"]+label::before {
+    content: "";
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    background-color: var(--bg-color);
+    border-radius: 2px;
+    vertical-align: middle;
+    margin-right: 0.5em;
+    box-shadow: var(--inset-shadow);
+    border: solid 1px var(--secondary-color);
+    transition: all 0.1s ease-out;
+}
+
+input[type="checkbox"]:focus+label::before {
+    box-shadow: var(--inset-shadow), var(--focus-blur);
+}
+
+input[type="checkbox"]:checked+label::before {
+    background-color: var(--primary-color);
+}
+
+input[type="checkbox"]:disabled+label {
+    color: var(--disabled-color);
+}
+
+/* **** */
+
+.radio {
+    position: relative;
+    display: block;
+}
+
+input[type="radio"] {
+    opacity: 0;
+}
+
+input[type="radio"]:not(:disabled)+label {
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+input[type="radio"]+label::before {
+    content: "";
+    display: inline-block;
+    height: 1.5em;
+    width: 1.5em;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 0.5em;
+    box-shadow: var(--inset-shadow);
+    border: solid 1px var(--secondary-color);
+    transition: all 0.1s ease-out;
+}
+
+input[type="radio"]:focus+label::before {
+    box-shadow: var(--inset-shadow), var(--focus-blur);
+}
+
+input[type="radio"]:checked+label::before {
+    background-color: var(--primary-color);
+}
+
+input[type="radio"]:disabled+label {
+    color: var(--disabled-color);
+}
