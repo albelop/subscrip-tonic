@@ -2,7 +2,7 @@
 import { LitElement, html } from 'lit-element';
 
 // Extend the LitElement base class
-class StHeader extends LitElement {
+class Header extends LitElement {
 
   /**
    * Implement `render` to define a template for your element.
@@ -24,4 +24,4 @@ class StHeader extends LitElement {
   }
 }
 // Register the new element with the browser.
-customElements.define('st-header', StHeader);
+customElements.define('st-header', Header); 
