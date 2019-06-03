@@ -14,68 +14,10 @@
 
   <!-- import the webpage's javascript file -->
   <script type="module" src="./src/app.js"></script>
-  <script type="module" src="./src/views/components/Header.js"></script>
 </head>
 
 <body>
-  <div class="app-wrapper">
-    <st-header></st-header>
-    
-    <header>
-      <h1>Subscrip<span>tonic</span></h1>
-    </header>
-
-    <main>
-      <section>
-
-        <h3>Your current subscriptions:</h3>
-        <ul id="items-grid" class="grid">
-          <li class="card grid-item">
-            <div class="card-logo" style="background-color:#1ED760">
-              <img height="48" width="48" src="https://unpkg.com/simple-icons@latest/icons/spotify.svg" />
-            </div>
-            <div class="card-content">
-              <div class="card-title">Spotify</div>
-              <div class="card-subtitle">Premium</div>
-              <div class="card-price">16.00€/month</div>
-            </div>
-          </li>
-          <li class="card grid-item">
-
-            <div class="card-logo" style="background-color:#E50914">
-              <img height="48" width="48" src="https://unpkg.com/simple-icons@latest/icons/netflix.svg" />
-            </div>
-            <div class="card-content">
-              <div class="card-title">Netflix</div>
-              <div class="card-subtitle">Premium</div>
-              <div class="card-price">14€/month</div>
-            </div>
-          </li>
-          <li class="card grid-item">
-
-            <div class="card-logo" style="background-color:#12100E">
-              <img height="48" width="48" src="https://unpkg.com/simple-icons@latest/icons/medium.svg" />
-            </div>
-            <div class="card-content">
-              <div class="card-title">Medium</div>
-              <div class="card-subtitle">Premium</div>
-              <div class="card-price">9.90€/month</div>
-            </div>
-          </li>
-          <li class="card grid-item">
-
-            <div class="card-logo">
-              <img height="48" width="48" src="https://unpkg.com/simple-icons@latest/icons/medium.svg" />
-            </div>
-            <div class="card-content">
-              <div class="card-title">Add new</div>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </main>
-  </div>
-
+  <st-app></st-app>
 </body>
 
 </html>
