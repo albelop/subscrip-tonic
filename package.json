@@ -4,14 +4,15 @@
     "lit-element": "^2.1.0"
   },
   "devDependencies": {
-    "polyserve": "^0.27.15"
+    "parcel-bundler": "^1.12.3"
   },
   "name": "subscrip-tonic",
   "description": "Welcome to Glitch\r =================",
   "version": "1.0.0",
   "main": "src/app.js",
   "scripts": {
-    "start": "polyserve",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "test"
   },
   "repository": {
@@ -23,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/albelop/subscrip-tonic/issues"
   },
-  "homepage": "https://github.com/albelop/subscrip-tonic#readme"
+  "homepage": "https://github.com/albelop/subscrip-tonic#readme",
+  "browserslist":[
+    "Chrome > 50"
+  ]
 }
