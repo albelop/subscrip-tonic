@@ -3,19 +3,67 @@ import { LitElement, html, css } from 'lit-element';
 export class SubscriptionGrid extends LitElement {
     static get styles() {
         return css`
-        .grid {
-            display: grid;
-            grid-template-columns: auto auto auto;
-            grid-gap: 16px 12px;
-            padding: 16px;
-        }
+     
 
-        .grid::after {
-            flex: auto;
-        }
+.card {
+    margin: 8px;
+    outline: none;
+    border-radius: 4px;
+    color: #fff;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: all 0.1s ease-out;
+    background-color: #334469;
+    display: flex;
+    flex-direction: row;
+}
 
-        .grid .grid-item {margin: 0;}
-        `
+.card .card-logo {
+    flex: 0 0 48px;
+    padding: 16px;
+    vertical-align: middle;
+    display: flex;
+}
+
+.card .card-logo img {
+    filter: invert(1);
+    flex: 1;
+    align-self: center;
+}
+
+.card .card-content {
+    flex: 1;
+    padding: 8px 16px;
+}
+
+.card-price {
+    float: right;
+}
+
+
+.card-content .card-title {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+.card-content .card-subtitle {
+    margin-top: 4px;
+    font-style: italic;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 16px 12px;
+    padding: 16px;
+}
+
+.grid::after {
+    /* content: ""; */
+    flex: auto;
+}
+
+.grid .grid-item {margin: 0;}   `
     }
 
     static get properties() {
